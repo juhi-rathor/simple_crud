@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD Application</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="crud.css" />
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">User Management</h1>
+
+    <table class="table-structure">
+      <thead>
+        <tr>
+          <th class="table-heading">ID</th>
+          <th class="table-heading">Name</th>
+          <th class="table-heading">Email</th>
+          <th class="table-heading">City</th>
+          <th class="table-heading">Zipcode</th>
+          <th class="table-heading">Action</th>
+        </tr>
+      </thead>
+      <tbody id="table-row">
+        <tr class="form-row">
+          <td><input type="text" hidden id="sno" /></td>
+          <td><input type="text" id="name" placeholder="Name" /></td>
+          <td><input type="email" id="email" placeholder="Email" /></td>
+          <td><input type="text" id="city" placeholder="City" /></td>
+          <td><input type="text" id="pin" placeholder="Zipcode" /></td>
+          <td>
+            <button type="button" class="create" id="btn">Create</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div class="modal" tabindex="-1" id="deleteModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete this user?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="confirm-button" data-bs-dismiss="modal">Confirm</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="crud.js"></script>
+</body>
+
+</html>
